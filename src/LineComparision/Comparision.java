@@ -15,5 +15,13 @@ public static void main(String[] args)
         System.out.println("Line1 is longer");
     else
         System.out.println("Line2 is longer");
+
+    if(line.equals(line1))
+    {
+        System.out.println("Lines are equal");
+    }
+    else{
+        System.out.println("Lines are not equal");
+    }
 }
 }

@@ -16,4 +16,11 @@ public class Line implements Comparable<Line>{
     public int compareTo(Line other) {
         return Double.compare(this.length(), other.length());
     }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Line other)) return false;
+
+        return Double.compare(this.length(), other.length()) == 0;
+    }
 }
