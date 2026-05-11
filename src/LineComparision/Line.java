@@ -11,4 +11,11 @@ public class Line {
     {
         return Math.sqrt(Math.pow(x2-x1,2)+Math.pow(y2-y1,2));
     }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Line other)) return false;
+
+        return Double.compare(this.length(), other.length()) == 0;
+    }
 }
