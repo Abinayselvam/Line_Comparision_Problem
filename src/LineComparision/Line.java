@@ -1,4 +1,4 @@
-public class Line {
+public class Line implements Comparable<Line>{
     int x1,x2,y1,y2;
     Line(int x1,int x2,int y1,int y2)
     {
@@ -10,5 +10,10 @@ public class Line {
     double length()
     {
         return Math.sqrt(Math.pow(x2-x1,2)+Math.pow(y2-y1,2));
+    }
+
+    @Override
+    public int compareTo(Line other) {
+        return Double.compare(this.length(), other.length());
     }
 }
